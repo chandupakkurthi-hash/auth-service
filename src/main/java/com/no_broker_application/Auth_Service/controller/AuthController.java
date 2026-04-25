@@ -31,11 +31,6 @@ public class AuthController {
         return ResponseEntity.ok(response);
     }
 
-    @GetMapping("/health")
-    public ResponseEntity<String> health() {
-        return ResponseEntity.ok("Auth-Service is UP");
-    }
-
     @PutMapping("/users/{userId}")
     public ResponseEntity<AuthResponse> updateUser(@PathVariable Long userId,
                                                    @RequestBody UpdateUserRequest request) {
