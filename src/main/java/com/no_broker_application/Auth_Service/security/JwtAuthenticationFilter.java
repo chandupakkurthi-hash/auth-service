@@ -72,7 +72,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         if (path == null) return false;
         if (path.contains("/auth/google-login")) return true;
         if (path.contains("/auth/validate")) return true;
-        if (path.startsWith("/actuator")) return true;
+        if (path.contains("/actuator")) return true;
         return false;
     }
 }
